@@ -29,9 +29,13 @@ gem 'sass-rails', '4.0.1'
 gem 'bootstrap-sass', '3.1.1.0'
 
 gem 'rmagick', '~> 2.13.2'
-gem 'carrierwave', '~> 0.10.0'
+#gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave-dropbox'
 gem 'turbolinks'
 gem 'jcrop-rails-v2', '~> 0.9.12.3'
+gem 'dropbox-sdk'
+
+gem 'fog'
 
 gem 'simple_form', '~> 3.0.1'
 gem 'quiet_assets', '~> 1.0.2'

@@ -500,3 +500,572 @@ Processing by BooksController#crop as HTML
   [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "3"]]
   Rendered books/crop.html.erb within layouts/application (42.0ms)
 Completed 200 OK in 74ms (Views: 65.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:45:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (7.8ms)
+  Rendered books/index.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 415ms (Views: 243.0ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/books/3" for 127.0.0.1 at 2014-03-21 10:46:02 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "id"=>"3"}
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (11.5ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 3]]
+  [1m[35m (48.3ms)[0m  commit transaction
+Expected(204) <=> Actual(500 InternalServerError)
+  response => #<Excon::Response:0x000000042d27e8 @data={:body=>"<?xml version='1.0' encoding='UTF-8'?><Error><Code>InternalError</Code><Message>We encountered an internal error. Please try again.</Message><Details>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</Details></Error>", :headers=>{"Content-Type"=>"application/xml; charset=UTF-8", "Content-Length"=>"5152", "Vary"=>"Origin", "Date"=>"Fri, 21 Mar 2014 09:46:20 GMT", "Expires"=>"Fri, 21 Mar 2014 09:46:20 GMT", "Cache-Control"=>"private, max-age=0", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Alternate-Protocol"=>"443:quic"}, :status=>500, :remote_ip=>"74.125.136.132", :local_port=>53028, :local_address=>"10.0.2.15"}, @body="<?xml version='1.0' encoding='UTF-8'?><Error><Code>InternalError</Code><Message>We encountered an internal error. Please try again.</Message><Details>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</Details></Error>", @headers={"Content-Type"=>"application/xml; charset=UTF-8", "Content-Length"=>"5152", "Vary"=>"Origin", "Date"=>"Fri, 21 Mar 2014 09:46:20 GMT", "Expires"=>"Fri, 21 Mar 2014 09:46:20 GMT", "Cache-Control"=>"private, max-age=0", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Alternate-Protocol"=>"443:quic"}, @status=500, @remote_ip="74.125.136.132", @local_port=53028, @local_address="10.0.2.15">
+Redirected to http://localhost:3000/books
+Completed 302 Found in 18863ms (ActiveRecord: 60.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:46:21 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 10:46:21 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (174.1ms)
+  Rendered books/new.html.erb within layouts/application (178.2ms)
+Completed 200 OK in 198ms (Views: 196.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 10:46:22 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (43.2ms)
+  Rendered books/new.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 10:46:35 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x0000000149a100 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-19907-1m4tso2>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"d", "title"=>"dd", "isbn"=>"dd", "price"=>"1"}, "commit"=>"Create Book"}
+  [1m[35m (1.5ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "d"], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 09:46:36 UTC +00:00], ["isbn", "dd"], ["price", 1], ["title", "dd"], ["updated_at", Fri, 21 Mar 2014 09:46:36 UTC +00:00]]
+  [1m[35m (8.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 23906ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x000000014b2a70 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:46:58 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53034, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:46:58 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53034, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:49:39 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 10:49:43 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (54.2ms)
+  Rendered books/new.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 85ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 10:49:49 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x000000046737a8 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-19907-cyofrs>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", ""], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 09:49:50 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Fri, 21 Mar 2014 09:49:50 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 24507ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x00000003767660 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:50:12 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53054, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:50:12 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53054, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:53:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 369ms (Views: 197.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 10:53:41 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (231.2ms)
+  Rendered books/new.html.erb within layouts/application (236.8ms)
+Completed 200 OK in 261ms (Views: 254.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 10:53:49 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x0000000492ff28 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-20004-bwc2k0>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"x", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.9ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 09:53:50 UTC +00:00], ["isbn", ""], ["title", "x"], ["updated_at", Fri, 21 Mar 2014 09:53:50 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 26596ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x00000002459258 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:54:14 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53137, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:54:14 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53137, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:58:50 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 10:58:50 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 10:58:53 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (36.0ms)
+  Rendered books/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 10:58:59 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x00000004ef81a8 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-20004-8pnsue>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", ""], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 09:59:00 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Fri, 21 Mar 2014 09:59:00 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 28145ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x00000001c5e5f8 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:59:26 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53172, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 09:59:26 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53172, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 11:02:44 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 11:04:44 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.4ms)
+  Rendered books/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 11:04:48 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (36.7ms)
+  Rendered books/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 11:04:54 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x000000050eea98 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-20004-15i1kg5>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 10:04:55 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Fri, 21 Mar 2014 10:04:55 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 30527ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x000000039c25b8 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 10:05:23 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53425, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 10:05:23 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53425, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-21 11:19:43 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-21 11:19:45 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (37.7ms)
+  Rendered books/new.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-21 11:19:52 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x000000051f6d00 @tempfile=#<Tempfile:/tmp/RackMultipart20140321-20004-1xltzda>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Fri, 21 Mar 2014 10:19:53 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Fri, 21 Mar 2014 10:19:53 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 30988ms
+
+Excon::Errors::ServiceUnavailable (Expected(200) <=> Actual(503 Service Unavailable)
+  response => #<Excon::Response:0x000000037de760 @data={:body=>"Service Unavailable", :headers=>{"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 10:20:20 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, :status=>503, :remote_ip=>"74.125.136.132", :local_port=>53655, :local_address=>"10.0.2.15"}, @body="Service Unavailable", @headers={"Content-Length"=>"19", "Date"=>"Fri, 21 Mar 2014 10:20:20 GMT", "Server"=>"HTTP Upload Server Built on Mar 13 2014 12:20:22 (1394738422)", "Content-Type"=>"text/html; charset=UTF-8", "Alternate-Protocol"=>"443:quic"}, @status=503, @remote_ip="74.125.136.132", @local_port=53655, @local_address="10.0.2.15">):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 13:57:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 117ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 13:57:29 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (55.0ms)
+  Rendered books/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 13:57:34 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x0000000435e658 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20668-72b4gk>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 12:57:34 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 12:57:34 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 226ms
+
+ArgumentError ( is not a recognized storage provider):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 13:58:24 +0100
+Processing by BooksController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/jochan/ruby/my_books2/app/uploaders/cover_uploader.rb:13: syntax error, unexpected ':', expecting keyword_end
+storage: dropbox
+        ^):
+  app/models/book.rb:2:in `<class:Book>'
+  app/models/book.rb:1:in `<top (required)>'
+  app/controllers/books_controller.rb:22:in `index'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 13:58:24 +0100
+Processing by BooksController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/jochan/ruby/my_books2/app/uploaders/cover_uploader.rb:13: syntax error, unexpected ':', expecting keyword_end
+storage: dropbox
+        ^):
+  app/models/book.rb:2:in `<class:Book>'
+  app/models/book.rb:1:in `<top (required)>'
+  app/controllers/books_controller.rb:22:in `index'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 13:58:56 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 13:58:57 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (24.1ms)
+  Rendered books/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 13:59:02 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x0000000437cf68 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20668-wpn8i5>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 12:59:02 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 12:59:02 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 328ms
+
+ArgumentError (root must be :dropbox, :app_folder, or :auto):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.5ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 13:59:49 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x0000000279b560 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20668-1hg5pp2>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 12:59:49 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 12:59:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 210ms
+
+ArgumentError (root must be :dropbox, :app_folder, or :auto):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 13:59:55 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 13:59:56 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (9.0ms)
+  Rendered books/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 13:59:59 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x000000056ee0d8 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20668-1b2ffyd>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 12:59:59 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 12:59:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 257ms
+
+ArgumentError (root must be :dropbox, :app_folder, or :auto):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 14:04:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 100ms (Views: 55.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 14:04:49 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (59.2ms)
+  Rendered books/new.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 14:04:58 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x00000003ecbcf8 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20800-1stzmkt>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 13:04:59 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 13:04:59 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 237ms
+
+NoMethodError (undefined method `gsub' for nil:NilClass):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 14:24:42 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 14:24:42 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (1.3ms)
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 14:24:44 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (11.0ms)
+  Rendered books/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 14:24:48 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x00000005161930 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20800-is0wsp>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 13:24:48 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 13:24:48 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 212ms
+
+NoMethodError (undefined method `gsub' for nil:NilClass):
+  app/controllers/books_controller.rb:45:in `block in create'
+  app/controllers/books_controller.rb:44:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 14:29:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (0.1ms)
+  Rendered books/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 105ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-03-22 14:29:28 +0100
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (50.4ms)
+  Rendered books/new.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-03-22 14:29:33 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x00000002af2a10 @tempfile=#<Tempfile:/tmp/RackMultipart20140322-20892-1vx79lw>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">, "cover_cache"=>"", "remote_cover_url"=>"", "author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", ""], ["cover", "untitled.png"], ["created_at", Sat, 22 Mar 2014 13:29:33 UTC +00:00], ["isbn", ""], ["title", ""], ["updated_at", Sat, 22 Mar 2014 13:29:33 UTC +00:00]]
+  [1m[36m (27.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/4
+Completed 302 Found in 4771ms (ActiveRecord: 29.4ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 14:29:38 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1855.8ms)
+Completed 200 OK in 1865ms (Views: 1861.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-22 14:30:03 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (1851.3ms)
+  Rendered books/index.html.erb within layouts/application (1856.2ms)
+Completed 200 OK in 1863ms (Views: 1861.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 14:30:09 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1883.5ms)
+Completed 200 OK in 1892ms (Views: 1889.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/4/crop" for 127.0.0.1 at 2014-03-22 14:30:14 +0100
+Processing by BooksController#crop as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered books/crop.html.erb within layouts/application (1844.6ms)
+Completed 200 OK in 1853ms (Views: 1851.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/books/4/update_crop" for 127.0.0.1 at 2014-03-22 14:30:20 +0100
+Processing by BooksController#update_crop as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"crop_x"=>"0", "crop_y"=>"0", "crop_w"=>"200", "crop_h"=>"200"}, "commit"=>"Crop", "id"=>"4"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `read' for #<CarrierWave::Storage::Dropbox::File:0x0000000405b618>):
+  app/models/book.rb:8:in `crop_cover'
+  app/controllers/books_controller.rb:11:in `block in update_crop'
+  app/controllers/books_controller.rb:10:in `update_crop'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
