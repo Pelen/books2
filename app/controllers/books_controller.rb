@@ -66,6 +66,11 @@ class BooksController < ApplicationController
     end
   end
 
+   def about
+ 
+    
+  end
+
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
