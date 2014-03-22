@@ -1,10 +1,10 @@
 class BooksController < ApplicationController
   # dodajemy :crop
-  before_action :set_book, only: [:show, :edit, :update, :destroy, :crop, :update_crop]
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
-  # GET /books/1/crop
-  def crop
-  end
+  # # GET /books/1/crop
+  # def crop
+  # end
 
   def update_crop
     respond_to do |format|
@@ -85,7 +85,6 @@ class BooksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
       params.require(:book).permit(:author, :title, :isbn, :price,
-      :cover, :remove_cover, :cover_cache, :remote_cover_url,
-      :crop_x, :crop_y, :crop_w, :crop_h)
+      :cover, :remove_cover, :cover_cache, :remote_cover_url)
     end
 end

@@ -34,7 +34,7 @@ storage :dropbox
 process :resize_to_fit => [400, 400]
   # Create different versions of your uploaded files:
     version :thumb do
-    process :crop
+    # process :crop
     process :resize_to_fit => [200, 400]
   end
 

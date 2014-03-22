@@ -1069,3 +1069,138 @@ NoMethodError (undefined method `read' for #<CarrierWave::Storage::Dropbox::File
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 15:03:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (1815.1ms)
+  Rendered books/index.html.erb within layouts/application (1831.4ms)
+Completed 200 OK in 1927ms (Views: 1878.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 15:03:40 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1807.6ms)
+Completed 200 OK in 1816ms (Views: 1813.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/4/crop" for 127.0.0.1 at 2014-03-22 15:03:45 +0100
+Processing by BooksController#crop as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered books/crop.html.erb within layouts/application (1843.8ms)
+Completed 200 OK in 1850ms (Views: 1847.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/books/4/update_crop" for 127.0.0.1 at 2014-03-22 15:03:49 +0100
+Processing by BooksController#update_crop as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "book"=>{"crop_x"=>"0", "crop_y"=>"0", "crop_w"=>"200", "crop_h"=>"200"}, "commit"=>"Crop", "id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `read' for #<CarrierWave::Storage::Dropbox::File:0x00000002dc05a8>):
+  app/models/book.rb:8:in `crop_cover'
+  app/controllers/books_controller.rb:11:in `block in update_crop'
+  app/controllers/books_controller.rb:10:in `update_crop'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 15:18:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (1821.6ms)
+  Rendered books/index.html.erb within layouts/application (1837.1ms)
+Completed 200 OK in 1965ms (Views: 1913.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 15:18:13 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1839.5ms)
+Completed 500 Internal Server Error in 1845ms
+
+ActionView::Template::Error (undefined method `crop_book_path' for #<#<Class:0x00000003952b00>:0x000000045deb58>):
+     8: 
+     9: <!-- <div class="form-actions">
+    10:   <% if @book.cover %>
+    11:   <%= link_to 'Crop cover', crop_book_path(@book) %>
+    12:   <% end %>
+    13: </div> -->
+    14: 
+  app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___552409285970782228_36628640'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 15:18:15 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1902.8ms)
+Completed 500 Internal Server Error in 1907ms
+
+ActionView::Template::Error (undefined method `crop_book_path' for #<#<Class:0x00000003952b00>:0x0000000410e920>):
+     8: 
+     9: <!-- <div class="form-actions">
+    10:   <% if @book.cover %>
+    11:   <%= link_to 'Crop cover', crop_book_path(@book) %>
+    12:   <% end %>
+    13: </div> -->
+    14: 
+  app/views/books/show.html.erb:11:in `_app_views_books_show_html_erb___552409285970782228_34104840'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2014-03-22 15:18:35 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (1859.2ms)
+Completed 200 OK in 1865ms (Views: 1863.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-22 15:18:40 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/_book.html.erb (1814.6ms)
+  Rendered books/index.html.erb within layouts/application (1819.0ms)
+Completed 200 OK in 1824ms (Views: 1823.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/books/4" for 127.0.0.1 at 2014-03-22 15:18:45 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j2ejYhUiUEnL/wKKVqeJaTsQci2/LHQOubf76bKGhI0=", "id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.7ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 4]]
+  [1m[35m (43.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 2737ms (ActiveRecord: 48.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-22 15:18:48 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/_book.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)

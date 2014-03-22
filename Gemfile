@@ -32,7 +32,7 @@ gem 'rmagick', '~> 2.13.2'
 #gem 'carrierwave', '~> 0.10.0'
 gem 'carrierwave-dropbox'
 gem 'turbolinks'
-gem 'jcrop-rails-v2', '~> 0.9.12.3'
+#gem 'jcrop-rails-v2', '~> 0.9.12.3'
 gem 'dropbox-sdk'
 
 gem 'fog'
