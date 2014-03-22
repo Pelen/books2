@@ -1,6 +1,5 @@
-<%= simple_form_for(@book) do |f| %>
-  <%= f.error_notification %>
-
+<%= simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| %>
+  
   <div class="control-group string optional">
     <div class="controls">
     <% if @book.cover? %>
@@ -8,24 +7,15 @@
     <% end %>
     </div>
   </div>
-  <div class="form-inputs">
-    <%= f.input :cover, label: "Upload local file", as: :file %>
-    <%= f.hidden_field :cover_cache %>
-    <%= f.input :remote_cover_url, label: "or input URL" %>
-    <% unless @book.new_record? %>
-      <%= f.input :remove_cover, label: "remove cover", as: :boolean %>
-    <% end %>
-  </div>
 
-
-  <div class="form-inputs">
-    <%= f.input :author %>
-    <%= f.input :title %>
-    <%= f.input :isbn %>
-    <%= f.input :price %>
-  </div>
-
+  <%= f.input :author %>
+  <%= f.input :title %>
+  <%= f.input :isbn %>
+  <%= f.input :price %>
+  <%= f.input :cover %>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn' %>
   </div>
 <% end %>
