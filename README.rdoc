@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplikacja na zaliczenie (My Books) - Jan Pieniążczak
 
-Things you may want to cover:
+== EXTRA GEMS
 
-* Ruby version
+* gem "twitter-bootstrap-rails" - CSS
 
-* System dependencies
+* gem "therubyracer" - do witter-bootstrap-rails
 
-* Configuration
+* gem "less-rails" - do witter-bootstrap-rails
 
-* Database creation
+* gem 'carrierwave-dropbox' - wysyłanie plików na dropboxa
 
-* Database initialization
+* gem 'dropbox-sdk' - połączenie do dropboxa
 
-* How to run the test suite
+== LINK
 
-* Services (job queues, cache servers, search engines, etc.)
+Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com/
 
-* Deployment instructions
+== WYKONANO
 
-* ...
+* zadania z TODO
 
+* zmiana wyglądu za pomocą twitter bootstrap
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* wgrywanie obrazków na dropboxa, aby można było wdrożyć aplikacje na Heroku
+
+* wdrożenie aplikacji na Heroku

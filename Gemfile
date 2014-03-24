@@ -13,7 +13,7 @@ gem 'jquery-rails', '3.1.0'
 
 
 gem 'jbuilder', '~> 1.2'
-gem 'pygments.rb', '0.5.4'
+#gem 'pygments.rb', '0.5.4'
 gem 'redcarpet', '3.1.1'
 
 group :development, :test do

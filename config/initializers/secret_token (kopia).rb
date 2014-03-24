@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Books::Application.config.secret_key_base = '57c985bce384b5e394b56eb9c9512c7165d217abacf5b259c3f056fcce75efc88f1d0f9f2453658cb722ef8ad323aebd1e8df219150657b89d8c5be93f474060'
+Books::Application.config.secret_key_base = '4b17b5b095805ecc4d765b58abfa0548f5fc64011e4bee5d11531acb2af35d9d06a85feee338c23a8d01bb6d6172400aaf62964fd6b4a2d3ceea6916ffb0be22'
