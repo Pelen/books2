@@ -38,6 +38,6 @@ gem 'turbolinks'
 gem 'dropbox-sdk'
 
 gem 'fog'
-
+gem 'execjs'
 gem 'simple_form', '~> 3.0.1'
 gem 'quiet_assets', '~> 1.0.2'

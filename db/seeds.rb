@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 puts "="*16, "Books", "="*16
 
 books = [

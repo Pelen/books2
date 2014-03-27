@@ -6854,3 +6854,908 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 12:24:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3695.7ms)
+Completed 200 OK in 3918ms (Views: 3872.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (36.5ms)[0m  [1mDROP TABLE "books"[0m
+  [1m[35m (9.4ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "title" varchar(255), "isbn" varchar(255), "price" integer, "created_at" datetime, "updated_at" datetime, "cover" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36m (55.5ms)[0m  [1mDROP TABLE "books"[0m
+  [1m[35m (11.7ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "title" varchar(255), "isbn" varchar(255), "price" integer, "created_at" datetime, "updated_at" datetime, "cover" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (46.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[35m (39.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[35m (11.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[35m (15.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:38 UTC +00:00]]
+  [1m[35m (28.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (19.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (24.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (16.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (21.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (16.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (21.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (29.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (22.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (16.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (12.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (16.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (16.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (13.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (26.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[35m (14.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:12:39 UTC +00:00]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:12:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 239ms (Views: 188.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-03-24 13:13:56 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-03-24 13:13:59 +0100
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (175.3ms)
+  Rendered books/_form.html.erb (8.6ms)
+  Rendered books/edit.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 241ms (Views: 239.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2014-03-24 13:14:04 +0100
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "book"=>{"author"=>"Henryk Sienkiewicz", "title"=>"Potop", "isbn"=>"978-83-702-3368-6", "price"=>"12000", "cover"=>#<ActionDispatch::Http::UploadedFile:0x000000055c11b0 @tempfile=#<Tempfile:/tmp/RackMultipart20140324-3269-9t3hmc>, @original_filename="untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"untitled.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.6ms)[0m  UPDATE "books" SET "cover" = ?, "updated_at" = ? WHERE "books"."id" = 1  [["cover", "untitled.png"], ["updated_at", Mon, 24 Mar 2014 12:14:05 UTC +00:00]]
+  [1m[36m (97.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 5048ms (ActiveRecord: 100.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-03-24 13:14:10 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (1867.7ms)
+Completed 200 OK in 1912ms (Views: 1907.6ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:42 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:42 UTC +00:00]]
+  [1m[35m (115.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (17.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (19.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (20.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (16.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (12.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (17.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (17.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (20.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (19.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (14.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (18.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (15.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (20.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (14.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (20.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (25.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (18.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (16.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (21.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (12.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (14.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (20.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (19.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "cover", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["cover", nil], ["created_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:16:43 UTC +00:00]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:17:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1965.9ms)
+Completed 200 OK in 2158ms (Views: 2110.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2014-03-24 13:17:16 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered books/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:17:19 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1936.3ms)
+Completed 200 OK in 1984ms (Views: 1981.9ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/books/2" for 127.0.0.1 at 2014-03-24 13:17:39 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 2]]
+  [1m[35m (31.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 39ms (ActiveRecord: 34.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:17:39 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1894.7ms)
+Completed 200 OK in 1945ms (Views: 1943.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/books/2" for 127.0.0.1 at 2014-03-24 13:17:41 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"2"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Book with id=2):
+  app/controllers/books_controller.rb:87:in `set_book'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:17:47 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1881.5ms)
+Completed 200 OK in 1922ms (Views: 1920.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2014-03-24 13:17:49 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Book with id=2):
+  app/controllers/books_controller.rb:87:in `set_book'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started DELETE "/books/2" for 127.0.0.1 at 2014-03-24 13:17:52 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Book with id=2):
+  app/controllers/books_controller.rb:87:in `set_book'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:17:54 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1996.4ms)
+Completed 200 OK in 2037ms (Views: 2035.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/books/3" for 127.0.0.1 at 2014-03-24 13:17:59 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 3]]
+  [1m[35m (32.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 37ms (ActiveRecord: 33.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:17:59 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1933.4ms)
+Completed 200 OK in 1978ms (Views: 1977.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/books/4" for 127.0.0.1 at 2014-03-24 13:18:04 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"4"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 4]]
+  [1m[36m (42.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 47ms (ActiveRecord: 43.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:04 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1897.0ms)
+Completed 200 OK in 1940ms (Views: 1939.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/books/5" for 127.0.0.1 at 2014-03-24 13:18:08 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 5]]
+  [1m[35m (34.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 38ms (ActiveRecord: 34.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:08 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1882.3ms)
+Completed 200 OK in 1933ms (Views: 1932.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/books/6" for 127.0.0.1 at 2014-03-24 13:18:13 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"6"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 6]]
+  [1m[36m (30.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 35ms (ActiveRecord: 30.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:13 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1897.9ms)
+Completed 200 OK in 1947ms (Views: 1946.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/books/7" for 127.0.0.1 at 2014-03-24 13:18:17 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"7"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 7]]
+  [1m[35m (55.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 63ms (ActiveRecord: 55.7ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:18 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1929.4ms)
+Completed 200 OK in 1974ms (Views: 1973.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/books/8" for 127.0.0.1 at 2014-03-24 13:18:22 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"8"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 8]]
+  [1m[36m (32.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 36ms (ActiveRecord: 33.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:22 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1914.1ms)
+Completed 200 OK in 1955ms (Views: 1953.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/books/9" for 127.0.0.1 at 2014-03-24 13:18:29 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"9"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 9]]
+  [1m[35m (23.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 31ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:29 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1875.8ms)
+Completed 200 OK in 1918ms (Views: 1915.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2014-03-24 13:18:32 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered books/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/books/10" for 127.0.0.1 at 2014-03-24 13:18:35 +0100
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9AFRmZ0P1a2jFCTG6+eQhHr9bjub1FKpwyX/k0XTstI=", "id"=>"10"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 10]]
+  [1m[35m (34.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 40ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:18:35 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1964.4ms)
+Completed 200 OK in 2014ms (Views: 2012.6ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:28:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1883.0ms)
+Completed 200 OK in 2074ms (Views: 2027.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2014-03-24 13:28:59 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "10"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Book with id=10):
+  app/controllers/books_controller.rb:87:in `set_book'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-24 13:30:16 +0100
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.3) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.3) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__975083742177705505__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:30:20 +0100
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.3) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.3) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__975083742177705505__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+  [1m[36m (30.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (13.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20140320172939)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "title" varchar(255), "isbn" varchar(255), "price" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140320172939"]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddCoverToBooks (20140320173057)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "books" ADD "cover" varchar(255)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140320173057"]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:30:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 195ms (Views: 147.4ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Henryk Sienkiewicz' AND "books"."title" = 'Potop' AND "books"."isbn" = '978-83-702-3368-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Potop"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (49.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Henryk Sienkiewicz' AND "books"."title" = 'Quo Vadis' AND "books"."isbn" = '978-83-702-3368-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Henryk Sienkiewicz"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Quo Vadis"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Adam Mickiewicz' AND "books"."title" = 'Pan Tadeusz' AND "books"."isbn" = '978-83-702-3368-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Adam Mickiewicz"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Pan Tadeusz"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (26.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Bruce A. Tate' AND "books"."title" = 'Rails Wprowadzenie' AND "books"."isbn" = '9788324622108' AND "books"."price" = 3000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Bruce A. Tate"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "9788324622108"], ["price", 3000], ["title", "Rails Wprowadzenie"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'J.K. Rowling' AND "books"."title" = 'Harry Potter i Komnata Tajemnic' AND "books"."isbn" = '978-83-702-3368-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "J.K. Rowling"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-702-3368-6"], ["price", 12000], ["title", "Harry Potter i Komnata Tajemnic"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (25.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Albert Uderzo' AND "books"."title" = 'Asteriks 26. Odyseja Asteriksa' AND "books"."isbn" = '978-83-237-4754-3' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Albert Uderzo"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-237-4754-3"], ["price", 12000], ["title", "Asteriks 26. Odyseja Asteriksa"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'James Patterson' AND "books"."title" = 'Alex Cross 9. Wielki zły wilk' AND "books"."isbn" = '83-7359-209-1' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "James Patterson"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "83-7359-209-1"], ["price", 12000], ["title", "Alex Cross 9. Wielki zły wilk"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (16.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Vendela Vida' AND "books"."title" = 'A teraz możesz już iść' AND "books"."isbn" = '83-7301-493-4' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Vendela Vida"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "83-7301-493-4"], ["price", 12000], ["title", "A teraz możesz już iść"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (25.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Douglas Noel Adams' AND "books"."title" = 'Autostopem przez Galaktykę' AND "books"."isbn" = '83-7359-201-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Douglas Noel Adams"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "83-7359-201-6"], ["price", 12000], ["title", "Autostopem przez Galaktykę"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Natalka Śniadanko' AND "books"."title" = 'Ahatanhel' AND "books"."isbn" = '978-83-7536-029-5' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Natalka Śniadanko"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "978-83-7536-029-5"], ["price", 12000], ["title", "Ahatanhel"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (22.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Aleksandra Marinina' AND "books"."title" = 'Anastazja Kamieńska 2. Gra na cudzym boisku' AND "books"."isbn" = '83-7414-105-0' AND "books"."price" = 3000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Aleksandra Marinina"], ["created_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00], ["isbn", "83-7414-105-0"], ["price", 3000], ["title", "Anastazja Kamieńska 2. Gra na cudzym boisku"], ["updated_at", Mon, 24 Mar 2014 12:32:08 UTC +00:00]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Angie Sage' AND "books"."title" = 'Araminta Spookie 4. Wstrętny wampirek' AND "books"."isbn" = '978-83-60010-67-9' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Angie Sage"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-60010-67-9"], ["price", 12000], ["title", "Araminta Spookie 4. Wstrętny wampirek"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Eoin Colfer' AND "books"."title" = 'Artemis Fowl 5. Zaginiona kolonia' AND "books"."isbn" = '978-83-7414-344-8' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Eoin Colfer"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7414-344-8"], ["price", 12000], ["title", "Artemis Fowl 5. Zaginiona kolonia"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Mike Spick' AND "books"."title" = 'Asy lotnictwa bombowego Luftwaffe' AND "books"."isbn" = '83-7359-209-1' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Mike Spick"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "83-7359-209-1"], ["price", 12000], ["title", "Asy lotnictwa bombowego Luftwaffe"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Paulo Coelho' AND "books"."title" = 'Alchemik' AND "books"."isbn" = '978-83-89933-43-0' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Paulo Coelho"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-89933-43-0"], ["price", 12000], ["title", "Alchemik"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (19.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Umberto Eco' AND "books"."title" = 'Apokaliptycy i dostosowani' AND "books"."isbn" = '978-83-7414-772-9' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Umberto Eco"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7414-772-9"], ["price", 12000], ["title", "Apokaliptycy i dostosowani"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (15.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Winfried Georg Sebald' AND "books"."title" = 'Austerlitz' AND "books"."isbn" = '978-83-7414-341-7' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Winfried Georg Sebald"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7414-341-7"], ["price", 12000], ["title", "Austerlitz"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Sue Townsend' AND "books"."title" = 'Adrian Mole. Na manowcach' AND "books"."isbn" = '978-83-7414-253-3' AND "books"."price" = 3000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Sue Townsend"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7414-253-3"], ["price", 3000], ["title", "Adrian Mole. Na manowcach"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Matthew Woodring Stover' AND "books"."title" = 'Akty Caine''a 3. Caine Czarny Nóż' AND "books"."isbn" = '978-83-7480-167-6' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Matthew Woodring Stover"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7480-167-6"], ["price", 12000], ["title", "Akty Caine'a 3. Caine Czarny Nóż"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = 'Olivier Todd' AND "books"."title" = 'Albert Camus. Biografia' AND "books"."isbn" = '978-83-237-4754-3' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", "Olivier Todd"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-237-4754-3"], ["price", 12000], ["title", "Albert Camus. Biografia"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (22.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."author" = ' Federico Moccia' AND "books"."title" = 'Amore 14' AND "books"."isbn" = '978-83-7758-458-3' AND "books"."price" = 12000 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "books" ("author", "created_at", "isbn", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["author", " Federico Moccia"], ["created_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00], ["isbn", "978-83-7758-458-3"], ["price", 12000], ["title", "Amore 14"], ["updated_at", Mon, 24 Mar 2014 12:32:09 UTC +00:00]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-24 13:32:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 209ms (Views: 161.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 09:05:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 950ms (Views: 652.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2014-03-27 09:05:44 +0100
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (101.2ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-03-27 09:06:59 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-03-27 09:07:01 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 73ms (Views: 72.3ms | ActiveRecord: 0.4ms)

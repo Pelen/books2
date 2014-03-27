@@ -183,6 +183,7 @@ DEPENDENCIES
   carrierwave-dropbox
   coffee-rails (~> 4.0.0)
   dropbox-sdk
+  execjs
   fog
   jbuilder (~> 1.2)
   jquery-rails (= 3.1.0)
