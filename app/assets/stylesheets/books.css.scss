@@ -1,12 +1,7 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$book-background: #F0EAC8;
-body {
-  width: 100%;
-}
-.book {
-  width: 200px;
-  background-color: $book-background;
-  margin-bottom: 20px;
-}
+
+
+@import "bootstrap"; // standard bootstrap stylesheet
+@import "bootstrap-responsive"; // stylesheet used to respond to different events
