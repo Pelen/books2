@@ -25,7 +25,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '3.1.1.0'
 gem 'bootstrap-generators', '~> 3.1.1'
 #gem "twitter-bootstrap-rails"

@@ -13,7 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 	
-//= require bootstrap
+//= require bootstrap/scrollspy
+//= require bootstrap/dropdown
+//= require bootstrap/tab
+//= require bootstrap/button
+//= require bootstrap/collapse
+//= require bootstrap/modal
+//= require bootstrap/carousel
+//= require bootstrap/alert
+//= require bootstrap/transition
+//= require bootstrap/tooltip
+//= require bootstrap/popover
+//= require bootstrap/affix
+
 //= require turbolinks
 //= require isotope.pkgd.min
 

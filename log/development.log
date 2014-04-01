@@ -8486,3 +8486,856 @@ Processing by BooksController#index as HTML
   [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
   Rendered books/index.html.erb within layouts/application (72.6ms)
 Completed 200 OK in 119ms (Views: 116.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:12:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (140.8ms)
+Completed 500 Internal Server Error in 492ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__18675628906249123_17059200'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (44.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:15:43 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 1266ms (Views: 1262.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:17:05 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 140ms (Views: 127.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-01 15:17:05 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (2689.2ms)
+  Rendered books/_form.html.erb (32.0ms)
+  Rendered books/edit.html.erb within layouts/application (2742.6ms)
+Completed 200 OK in 2832ms (Views: 2824.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:17:44 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 124ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:17:48 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 123ms (Views: 115.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:18:33 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (1.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:18:40 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 136ms (Views: 132.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:18:46 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 116ms (Views: 107.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:18:51 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 97ms (Views: 89.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:19:06 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 111ms (Views: 103.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:19:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (1.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 725ms (Views: 503.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:19:24 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 97ms (Views: 92.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:19:32 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 122ms (Views: 117.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:19:34 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 96ms (Views: 92.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:19:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (157.2ms)
+Completed 200 OK in 762ms (Views: 592.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:21:11 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (71.2ms)
+Completed 200 OK in 175ms (Views: 172.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:21:56 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (2.7ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (97.3ms)
+Completed 200 OK in 185ms (Views: 177.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:21:58 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 168ms (Views: 163.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:22:41 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.6ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 379ms (Views: 375.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:22:47 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.7ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (113.8ms)
+Completed 200 OK in 184ms (Views: 178.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:22:53 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 180ms (Views: 176.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:23:16 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (67.6ms)
+Completed 500 Internal Server Error in 202ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/bootstrap-generators.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3730360149178917758_32078680'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:23:39 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 156ms (Views: 151.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:23:58 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (69.2ms)
+Completed 500 Internal Server Error in 205ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/bootstrap-generators.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3730360149178917758_32078680'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:24:00 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (77.9ms)
+Completed 500 Internal Server Error in 177ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/bootstrap-generators.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3730360149178917758_32078680'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:24:36 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 1014ms (Views: 1011.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:25:14 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (92.4ms)
+Completed 500 Internal Server Error in 209ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/bootstrap-generators.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3730360149178917758_32078680'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:25:21 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (79.8ms)
+Completed 500 Internal Server Error in 193ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/bootstrap-generators.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3730360149178917758_32078680'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:25:41 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:26:01 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 198ms (Views: 194.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:26:25 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 152ms (Views: 149.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:30:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (145.1ms)
+Completed 200 OK in 755ms (Views: 592.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:32:50 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 343ms (Views: 339.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:32:53 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 149ms (Views: 145.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:33:07 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (152.8ms)
+Completed 200 OK in 702ms (Views: 524.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:33:10 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (71.7ms)
+Completed 200 OK in 144ms (Views: 140.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:33:13 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 188ms (Views: 183.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:39:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (163.9ms)
+Completed 500 Internal Server Error in 462ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4282684874136446100_26851440'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:39:46 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (64.4ms)
+Completed 500 Internal Server Error in 155ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___4282684874136446100_26851440'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:41:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (164.7ms)
+Completed 500 Internal Server Error in 453ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1312753639080367911_27111960'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:41:45 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (70.9ms)
+Completed 500 Internal Server Error in 157ms
+
+ActionView::Template::Error (undefined method `environment' for nil:NilClass
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1312753639080367911_27111960'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (54.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:43:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (147.7ms)
+Completed 500 Internal Server Error in 4951ms
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-responsive.
+Load paths:
+  /home/jochan/ruby/my_books2/app/assets/images
+  /home/jochan/ruby/my_books2/app/assets/javascripts
+  /home/jochan/ruby/my_books2/app/assets/stylesheets
+  /home/jochan/ruby/my_books2/vendor/assets/javascripts
+  /home/jochan/ruby/my_books2/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.2.1/lib/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.0/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/twitter/bootstrap/sass
+  /home/jochan/ruby/my_books2/app/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:7)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___226015151327094770_9562720'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (57.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:45:31 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 3878ms (Views: 3874.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:46:23 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (79.3ms)
+Completed 500 Internal Server Error in 283ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap-responsive'
+  (in /home/jochan/ruby/my_books2/app/assets/javascripts/application.js:28)):
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+    19: <body>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___226015151327094770_9562720'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:46:36 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (3.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (104.6ms)
+Completed 200 OK in 180ms (Views: 174.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:46:45 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (4.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (97.0ms)
+Completed 500 Internal Server Error in 1405ms
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-responsive.
+Load paths:
+  /home/jochan/ruby/my_books2/app/assets/images
+  /home/jochan/ruby/my_books2/app/assets/javascripts
+  /home/jochan/ruby/my_books2/app/assets/stylesheets
+  /home/jochan/ruby/my_books2/vendor/assets/javascripts
+  /home/jochan/ruby/my_books2/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/turbolinks-2.2.1/lib/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/jquery-rails-3.1.0/vendor/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-generators-3.1.1.2/vendor/twitter/bootstrap/sass
+  /home/jochan/ruby/my_books2/app/assets/fonts
+  /home/jochan/.rvm/gems/ruby-2.1.1/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:7)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___226015151327094770_9562720'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:47:29 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 174ms (Views: 168.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:47:40 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 132ms (Views: 128.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:47:42 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 141ms (Views: 137.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:47:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (172.0ms)
+Completed 200 OK in 705ms (Views: 497.2ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:47:58 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 145ms (Views: 141.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:48:33 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (2.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 152ms (Views: 147.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:49:24 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 153ms (Views: 149.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:49:33 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (1.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 124ms (Views: 109.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:49:39 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (88.7ms)
+Completed 200 OK in 179ms (Views: 176.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 15:49:42 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 149ms (Views: 144.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2014-04-01 15:49:44 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 101ms (Views: 95.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:49:50 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.8ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 163ms (Views: 158.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:56:47 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (3.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (64.7ms)
+Completed 500 Internal Server Error in 1458ms
+
+ActionView::Template::Error (Invalid CSS after "  }": expected "}", was ""
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:43)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/custom.css.scss:43
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__3691553558047688172_40160380'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:57:56 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (69.1ms)
+Completed 500 Internal Server Error in 1521ms
+
+ActionView::Template::Error (Invalid CSS after "  }": expected "}", was ""
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:32)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/custom.css.scss:32
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__3691553558047688172_40160380'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:57:59 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (68.4ms)
+Completed 500 Internal Server Error in 1360ms
+
+ActionView::Template::Error (Invalid CSS after "  }": expected "}", was ""
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:32)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/custom.css.scss:32
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__3691553558047688172_40160380'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.9ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:58:21 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (74.2ms)
+Completed 500 Internal Server Error in 1444ms
+
+ActionView::Template::Error (Invalid CSS after "  }": expected "}", was ""
+  (in /home/jochan/ruby/my_books2/app/assets/stylesheets/books.css.scss:38)):
+    12:     <%= javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" %>
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+  app/assets/stylesheets/custom.css.scss:38
+  app/assets/stylesheets/books.css.scss:7
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__3691553558047688172_40160380'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (50.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 15:58:51 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.7ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 2278ms (Views: 2272.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 16:00:55 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 147ms (Views: 143.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 16:02:30 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 151ms (Views: 147.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 16:05:08 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (119.5ms)
+Completed 200 OK in 191ms (Views: 187.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 16:05:57 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 171ms (Views: 167.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-01 16:06:05 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (156.7ms)
+  Rendered books/_form.html.erb (36.7ms)
+  Rendered books/edit.html.erb within layouts/application (217.9ms)
+Completed 200 OK in 296ms (Views: 285.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 16:06:07 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (89.5ms)
+Completed 200 OK in 171ms (Views: 167.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-01 16:06:12 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (43.6ms)
+  Rendered books/_form.html.erb (42.0ms)
+  Rendered books/edit.html.erb within layouts/application (99.7ms)
+Completed 200 OK in 171ms (Views: 165.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-01 16:06:26 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (123.0ms)
+Completed 200 OK in 192ms (Views: 188.1ms | ActiveRecord: 0.9ms)
