@@ -6,6 +6,12 @@ class BooksController < ApplicationController
   # def crop
   # end
 
+
+
+
+
+
+
   def update_crop
     respond_to do |format|
       if @book.update(book_params)
@@ -19,7 +25,14 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+
+ if params[:search]
+      @books = Book.search(params[:search])
+    else
+      @books = Book.all
+    end
+
+  
   end
 
   # GET /books/1
