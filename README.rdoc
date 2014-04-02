@@ -4,15 +4,17 @@ Aplikacja na zaliczenie (My Books) - Jan Pieniążczak
 
 == EXTRA GEMS
 
-* gem "twitter-bootstrap-rails" - CSS
+* gem 'bootstrap_form'
 
-* gem "therubyracer" - do witter-bootstrap-rails
+* gem 'sass-rails'
 
-* gem "less-rails" - do witter-bootstrap-rails
+* gem 'bootstrap-sass'
 
-* gem 'carrierwave-dropbox' - wysyłanie plików na dropboxa
+* gem 'bootstrap-generators'
 
-* gem 'dropbox-sdk' - połączenie do dropboxa
+* gem 'carrierwave-dropbox'
+
+
 
 == LINK
 
@@ -20,9 +22,13 @@ Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com/
 
 == WYKONANO
 
-* zadania z TODO
+* zmiana wyglądu za pomocą bootstrapa przy urzyciu generatorów oraz gemu bootstrap_form do tworzenia formularzy
 
-* zmiana wyglądu za pomocą twitter bootstrap
+* dodanie infinity scrolling zgodnie z przykładem dostępnym tutaj[https://gist.github.com/qbraksa/5606187]
+
+* responsywność - dzięki tutorialowi który można znaleźć tutaj[http://css-tricks.com/responsive-data-tables/]
+
+* wyszukiwarka przeszukująca tytuły książe - dzięki tutorialowi który można znaleźć tutaj[khttp://www.jorgecoca.com/buils-search-form-ruby-rails/]
 
 * wgrywanie obrazków na dropboxa, aby można było wdrożyć aplikacje na Heroku
 
