@@ -1,7 +1,14 @@
-$('#my-books').append('<%= j render @books %>');
-<% if @books.next_page %>
-  $('.pagination').replaceWith('<%= j will_paginate @books %>');
-<% else %>
-  $(window).off('scroll');
-  $('.pagination').remove();
-<% end %>
+// $('#my-books').append('<%= j render @books %>');
+// <% if @books.next_page %>
+//   $('.pagination').replaceWith('<%= j will_paginate @books %>');
+// <% else %>
+//   $(window).off('scroll');
+//   $('.pagination').remove();
+// <% end %>
+
+<% if @books.all.count>0 -%>
+$('ul').append('<%= escape_javascript(render(partial: 'books')) %>');
+$('a.hook').attr('href', '<%= books_path(page: (params[:page].to_i || 1)+1, per_page: params[:per_page] || 15) %>').show();
+<% else -%>
+$('a.hook').hide();
+<% end -%>
