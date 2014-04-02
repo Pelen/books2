@@ -26,6 +26,9 @@
 //= require bootstrap/popover
 //= require bootstrap/affix
 
+
+
+
 //= require jquery.inview.min.js
 //= require turbolinks
 //= require isotope.pkgd.min

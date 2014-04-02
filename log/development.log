@@ -15961,3 +15961,191 @@ Processing by BooksController#edit as HTML
   Rendered books/_form.html.erb (8.9ms)
   Rendered books/edit.html.erb within layouts/application (22.5ms)
 Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:24:48 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (27.7ms)
+  Rendered books/edit.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    12: 
+    13: 
+    14: 
+    15:  <%= bootstrap_form_for(@user) do |f| %>
+    16:   <%= f.input :author, :class => 'form  form-control' , :type => 'text'%>
+    17:   <%= f.input :title %>
+    18:   <%= f.input :isbn %>
+  app/views/books/_form.html.erb:15:in `block in _app_views_books__form_html_erb__997782182544114574_45655100'
+  app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__997782182544114574_45655100'
+  app/views/books/edit.html.erb:5:in `_app_views_books_edit_html_erb__3755734777672296360_46268900'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:25:04 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (15.5ms)
+  Rendered books/edit.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `input' for #<BootstrapForm::FormBuilder:0x000000050270b0>):
+    13: 
+    14: 
+    15:  <%= bootstrap_form_for(@book) do |f| %>
+    16:   <%= f.input :author%>
+    17:   <%= f.input :title %>
+    18:   <%= f.input :isbn %>
+    19:   <%= f.input :price %>
+  app/views/books/_form.html.erb:16:in `block (2 levels) in _app_views_books__form_html_erb__997782182544114574_42184900'
+  app/views/books/_form.html.erb:15:in `block in _app_views_books__form_html_erb__997782182544114574_42184900'
+  app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__997782182544114574_42184900'
+  app/views/books/edit.html.erb:5:in `_app_views_books_edit_html_erb__3755734777672296360_46268900'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:27:24 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (10.6ms)
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/edit.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms'
+  (in /home/jochan/ruby/my_books2/app/assets/javascripts/application.js:30)):
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+    19: <body>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1943747204355066151_46165260'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:28:49 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (5.2ms)
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/edit.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 97ms
+
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms'
+  (in /home/jochan/ruby/my_books2/app/assets/javascripts/application.js:30)):
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+    19: <body>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1943747204355066151_46165260'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:28:51 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (4.8ms)
+  Rendered books/_form.html.erb (5.0ms)
+  Rendered books/edit.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 86ms
+
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms'
+  (in /home/jochan/ruby/my_books2/app/assets/javascripts/application.js:30)):
+    13:   <![endif]-->
+    14: 
+    15:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    16:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    17:   <%= csrf_meta_tags %>
+    18: </head>
+    19: <body>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1943747204355066151_46165260'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:28:59 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (5.4ms)
+  Rendered books/_form.html.erb (4.7ms)
+  Rendered books/edit.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 130ms (Views: 128.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:30:06 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (16.3ms)
+  Rendered books/edit.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `input' for #<BootstrapForm::FormBuilder:0x000000053c6dd8>):
+    17:   <%= f.text_field :title %>
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.input :cover %>
+    21: 
+    22: <% end %>
+    23:   <div class="form-actions">
+  app/views/books/_form.html.erb:20:in `block (2 levels) in _app_views_books__form_html_erb__997782182544114574_44035080'
+  app/views/books/_form.html.erb:15:in `block in _app_views_books__form_html_erb__997782182544114574_44035080'
+  app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__997782182544114574_44035080'
+  app/views/books/edit.html.erb:5:in `_app_views_books_edit_html_erb__3755734777672296360_46268900'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-04-02 12:30:36 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (11.4ms)
+  Rendered books/_form.html.erb (5.0ms)
+  Rendered books/edit.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 12:31:03 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (12.3ms)
+  Rendered books/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.4ms)
