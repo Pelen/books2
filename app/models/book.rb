@@ -10,7 +10,7 @@ class Book < ActiveRecord::Base
 
  
   validates :title, presence: true, uniqueness: true
-  validates :content, presence: true
+  # validates :content, presence: true
  
   # It returns the articles whose titles contain one or more words that form the query
   def self.search(query)

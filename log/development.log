@@ -11059,3 +11059,150 @@ Processing by BooksController#index as HTML
   [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
   Rendered books/index.html.erb within layouts/application (129.4ms)
 Completed 200 OK in 206ms (Views: 202.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:44:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (199.6ms)
+Completed 200 OK in 2182ms (Views: 1613.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-04-02 09:44:54 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (244.7ms)
+  Rendered books/new.html.erb within layouts/application (261.9ms)
+Completed 200 OK in 293ms (Views: 291.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-04-02 09:45:00 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/wYlOVgPTloxzNLDCcyVJoV28OSusMISZml4E7s7S2I=", "book"=>{"author"=>"s", "title"=>"s", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 's' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 122ms
+
+NoMethodError (undefined method `content' for #<Book:0x00000003ce1398>):
+  app/controllers/books_controller.rb:58:in `block in create'
+  app/controllers/books_controller.rb:57:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:51:04 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-04-02 09:51:10 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (17.4ms)
+  Rendered books/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-04-02 09:51:14 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NapDObc8JE3Pggk1NH7LliiLPDhvpTEJnrBVsA+8EVM=", "book"=>{"author"=>"", "title"=>"sw", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'sw' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `content' for #<Book:0x00000003fac9b0>):
+  app/controllers/books_controller.rb:58:in `block in create'
+  app/controllers/books_controller.rb:57:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:51:51 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-04-02 09:51:53 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (11.4ms)
+  Rendered books/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-04-02 09:52:04 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NapDObc8JE3Pggk1NH7LliiLPDhvpTEJnrBVsA+8EVM=", "book"=>{"author"=>"", "title"=>"ss", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'ss' LIMIT 1
+  [1m[36mSQL (118.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "isbn", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["author", ""], ["created_at", Wed, 02 Apr 2014 07:52:04 UTC +00:00], ["isbn", ""], ["title", "ss"], ["updated_at", Wed, 02 Apr 2014 07:52:04 UTC +00:00]]
+  [1m[35m (38.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/22
+Completed 302 Found in 165ms (ActiveRecord: 157.4ms)
+
+
+Started GET "/books/22" for 127.0.0.1 at 2014-04-02 09:52:05 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "22"]]
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:52:17 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/books/22" for 127.0.0.1 at 2014-04-02 09:52:32 +0200
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NapDObc8JE3Pggk1NH7LliiLPDhvpTEJnrBVsA+8EVM=", "id"=>"22"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "22"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 22]]
+  [1m[35m (51.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 57ms (ActiveRecord: 51.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-02 09:52:32 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:52:39 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books?utf8=%E2%9C%93&search=potop" for 127.0.0.1 at 2014-04-02 09:52:54 +0200
+Processing by BooksController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"potop"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE (title like '%potop%')[0m
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-02 09:52:56 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.3ms)
