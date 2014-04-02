@@ -31,6 +31,8 @@ GEM
       railties (>= 3.1.0)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.1.4)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -169,6 +171,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
@@ -176,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-generators (~> 3.1.1)
   bootstrap-sass (= 3.1.1.0)
+  bootstrap-will_paginate (~> 0.0.10)
   carrierwave-dropbox
   coffee-rails (~> 4.0.0)
   dropbox-sdk
@@ -196,3 +200,4 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate (~> 3.0.5)

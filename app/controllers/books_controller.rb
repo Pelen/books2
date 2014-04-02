@@ -29,7 +29,11 @@ class BooksController < ApplicationController
  if params[:search]
       @books = Book.search(params[:search])
     else
-      @books = Book.all
+      @books = Book.paginate(page: params[:page], per_page: 10)
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
 
   

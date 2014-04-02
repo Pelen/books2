@@ -37,9 +37,9 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              books_path, :class => 'btn'  %>
+              books_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_book_path(@book), :class => 'btn' %>
+              edit_book_path(@book), :class => 'btn btn-success' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               book_path(@book),
               :method => 'delete',

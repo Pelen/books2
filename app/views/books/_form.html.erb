@@ -8,14 +8,20 @@
     </div>
   </div>
 
-  <%= f.input :author %>
+
+  <div class="form-group">
+    <label for="book_author">Author</label>
+    <input class="form-control" id="book_author" name="book[author]" type="text">
+  </div>
+  <%= f.input :author, :class => 'form  form-control' , :type => 'text'%>
   <%= f.input :title %>
   <%= f.input :isbn %>
   <%= f.input :price %>
   <%= f.input :cover %>
+
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                books_path, :class => 'btn' %>
+                books_path, :class => 'btn btn-default' %>
   </div>
 <% end %>
