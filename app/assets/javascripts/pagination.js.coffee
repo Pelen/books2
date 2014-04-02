@@ -1,3 +1,4 @@
+jQuery ->
   if $('#infinite-scrolling').size() > 0
     $(window).on 'scroll', ->
       more_books_url = $('.pagination .next_page').attr('href')
@@ -6,6 +7,3 @@
             $.getScript more_books_url
         return
       return
-
-
- 
