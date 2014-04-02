@@ -1,6 +1,12 @@
+==Jan Pieniążczak - My Books
+
+=========
+
 == README
 
-Aplikacja na zaliczenie (My Books) - Jan Pieniążczak
+Rozszerzenie aplikacji (My Books)[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na Heroku.
+
+
 
 == EXTRA GEMS
 
@@ -28,7 +34,7 @@ Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com/
 
 * <b>responsywność</b> - dzięki tutorialowi który można znaleźć tutaj[http://css-tricks.com/responsive-data-tables/]
 
-* wyszukiwarka przeszukująca tytuły książe - dzięki tutorialowi który można znaleźć tutaj[http://www.jorgecoca.com/buils-search-form-ruby-rails]
+* wyszukiwarka przeszukująca tytuły książek - dzięki tutorialowi który można znaleźć tutaj[http://www.jorgecoca.com/buils-search-form-ruby-rails]
 
 * wgrywanie obrazków na <b>dropboxa</b>, aby można było wdrożyć aplikacje na Heroku
 
