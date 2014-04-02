@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require test	
+//= require endless_scroll	
 //= require bootstrap/scrollspy
 //= require bootstrap/dropdown
 //= require bootstrap/tab

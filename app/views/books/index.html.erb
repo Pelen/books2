@@ -3,13 +3,15 @@
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 
-
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_book_path,
+            :class => 'btn btn-primary' %>
 
 <table class="table table-striped">
 
 
 
-  <thead>
+  <thead >
     <tr>
       <th>Cover</th>
       
@@ -23,33 +25,26 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="books">
 
 
-<ul><%= render  @books %></ul>
 
-
-<!-- 
-<div id="my-books">
 <%= render  @books %>
-</div> -->
- 
+</tbody>
 
-
-   </tbody>
 </table>
+
+
+
 <!-- 
-<div id="infinite-scrolling">
-  <%= will_paginate(@books) %>
-</div> -->
-
-<%= link_to 'Load More', books_path(page: (params[:page].to_i || 1)+1, per_page: params[:per_page] || 15), class: 'hook', remote: true %>
-
-
+  
+  <div id="infinite-scrolling">
+    <%= will_paginate %>
+  </div>
+ -->
 
 
 
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_book_path,
-            :class => 'btn btn-primary' %>
+
+
