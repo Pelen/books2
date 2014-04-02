@@ -26,17 +26,16 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
 
- if params[:search]
-      @books = Book.search(params[:search])
-    else
-      @books = Book.paginate(:page => params[:page], :per_page => 5)
-      
-      respond_to do |format|
-  format.html
-  format.js
-end
-    end
 
+
+
+def index
+    if params[:search]
+      @books = Book.search(params[:search]).paginate(page: params[:page], per_page: 100)
+    else
+      @books = Book.paginate(page: params[:page], per_page: 7)
+    end
+  end
   
   end
 

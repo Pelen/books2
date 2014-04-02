@@ -2,7 +2,7 @@ var currentPage = 1;
 var intervalID = -1000;
  
 function checkScroll() {
-  if (nearBottomOfPage()) {
+  if (nearBottomOfPage() && (currentPageUrl=="http://pelen.herokuapp.com/" || currentPageUrl=="http://pelen.herokuapp.com/books") ) {
     currentPage++;
   console.log("endless request "+ currentPage);
     jQuery.ajax('?page=' + currentPage, {asynchronous:true, evalScripts:true, method:'get', success: function(data, textStatus, jqXHR) {
