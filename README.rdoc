@@ -2,8 +2,6 @@
 
 =========
 
-== README
-
 Rozszerzenie aplikacji (My Books)[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na Heroku.
 
 
@@ -24,7 +22,7 @@ Rozszerzenie aplikacji (My Books)[https://github.com/rails4/my_books] o kilka do
 
 == LINK
 
-Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com/
+Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com
 
 == WYKONANO
 
