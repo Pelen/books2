@@ -32,7 +32,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '3.1.1.0'
 gem 'bootstrap-generators', '~> 3.1.1'
 #gem "twitter-bootstrap-rails"
-gem "therubyracer"
+#gem "therubyracer"
 #gem "less-rails"
 gem 'rmagick', '~> 2.13.2'
 #gem 'carrierwave', '~> 0.10.0'
