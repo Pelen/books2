@@ -9,6 +9,7 @@ class Book < ActiveRecord::Base
  #  end
 
  self.per_page = 10
+ 
   validates :title, presence: true, uniqueness: true
   # validates :content, presence: true
  

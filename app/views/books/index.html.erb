@@ -11,7 +11,7 @@
 
 
 
-  <thead >
+  <thead>
     <tr>
       <th>Cover</th>
       
@@ -27,25 +27,15 @@
 
   <tbody class="books">
 
-<%= render partial: 'book', collection: @books %>
+
+<%= render  @books %>
 
 
-</tbody>
 
+   </tbody>
 </table>
-
-
-  
 <noscript>
-
-
 <div id="infinite-scrolling">
-    <%= will_paginate @books %>
-  </div>
-
-
+  <%= will_paginate %>
+</div>
 </noscript>
-
-
-
-

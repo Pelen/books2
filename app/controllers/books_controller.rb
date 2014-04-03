@@ -33,9 +33,9 @@ def index
     if params[:search]
       @books = Book.search(params[:search]).paginate(page: params[:page], per_page: 4)
     else
-      @books = Book.paginate(page: params[:page], per_page: 4)
-      respond_to do |format|
-        format.html
+       @books = Book.paginate(page: params[:page], per_page: 10)
+       respond_to do |format|
+         format.html
          format.js
       end
     end
