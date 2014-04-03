@@ -31,9 +31,9 @@ class BooksController < ApplicationController
 
 def index
     if params[:search]
-      @books = Book.search(params[:search]).paginate(page: params[:page], per_page: 100)
+      @books = Book.search(params[:search])
     else
-      @books = Book.paginate(page: params[:page], per_page: 7)
+      @books = Book.paginate(page: params[:page], per_page: 4)
     end
   end
   
