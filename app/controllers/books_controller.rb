@@ -24,7 +24,7 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
-  def index
+  
 
 
 
@@ -39,7 +39,7 @@ def index
          format.js
       end
     end
-  end
+
   
   end
 

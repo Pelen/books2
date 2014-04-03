@@ -26976,3 +26976,62 @@ Processing by BooksController#index as */*
   Rendered collection (1.5ms)
   Rendered books/index.html.erb within layouts/application (17.8ms)
 Completed 200 OK in 132ms (Views: 127.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 21:28:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (218.8ms)
+Completed 500 Internal Server Error in 361ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    28:   <tbody class="books">
+    29: 
+    30: 
+    31: <%= render  @books %>
+    32: 
+    33: 
+    34: 
+  app/views/books/index.html.erb:31:in `_app_views_books_index_html_erb___1746914310155650606_30777820'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (57.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 21:32:46 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.4ms)[0m  SELECT "books".* FROM "books" LIMIT 10 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (43.6ms)
+  Rendered books/index.html.erb within layouts/application (97.1ms)
+Completed 200 OK in 541ms (Views: 507.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 21:32:46 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" LIMIT 10 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (41.9ms)
+  Rendered books/index.html.erb within layouts/application (63.8ms)
+Completed 200 OK in 146ms (Views: 142.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 21:34:03 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books" LIMIT 10 OFFSET 0
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (79.0ms)
+  Rendered books/index.html.erb within layouts/application (289.1ms)
+Completed 200 OK in 1063ms (Views: 860.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 21:34:05 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.6ms)[0m  SELECT "books".* FROM "books" LIMIT 10 OFFSET 0
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (40.7ms)
+  Rendered books/index.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 169ms (Views: 164.4ms | ActiveRecord: 2.4ms)
