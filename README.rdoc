@@ -1,6 +1,6 @@
 ==Jan Pieniążczak - My Books
 
-Rozszerzenie aplikacji (My Books)[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na Heroku.
+Rozszerzenie aplikacji My+Books[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na Heroku.
 
 Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, które są umieszczane są na dropboxie.
 
